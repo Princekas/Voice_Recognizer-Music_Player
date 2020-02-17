@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    tools:context=".PlayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/upper"
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+        <VideoView
+            android:id="@+id/videoview"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="67dp" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/videoview"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+
+
+            android:layout_marginTop="278dp"
+            android:layout_marginEnd="0dp"
+            android:background="#dd9c6b"
+
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lower"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_below="@+id/upper"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="56dp"
+
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="160dp"
+        android:background="#ce9f95"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/previous_button"
+            android:layout_width="126dp"
+            android:layout_height="249dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/previousbutton" />
+
+        <ImageView
+            android:id="@+id/play_pause_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginStart="119dp"
+            android:layout_marginLeft="14dp"
+
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toLeftOf="@+id/next_btn"
+            android:src="@drawable/resume" />
+
+        <ImageView
+            android:id="@+id/next_btn"
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/next" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/voice_enabled_btn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="397dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#D5E62C"
+        android:text="CLICK TO Voice Enabled Mode -OFF"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/helpknowledge"
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="342dp"
+        android:layout_marginBottom="111dp"
+        android:background="#f6cfca"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Step 1 :\nTouch The Screen \n\nStep 2:\nTo Play The Music =>Speak 'Play'\nTo Pause The Music =>Speak 'Wait'\nTo Play Next Music =>Speak 'Next'\nTo Play Previous Music =>Speak 'Back'"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="81dp"
+        android:background="#ce9f95" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="110dp" />
+</RelativeLayout>
